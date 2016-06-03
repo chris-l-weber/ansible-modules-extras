@@ -21,6 +21,7 @@
 
 import ConfigParser
 import os
+from ansible.module_utils.pycompat24 import get_exception
 
 
 DOCUMENTATION = '''
@@ -461,7 +462,6 @@ state:
     sample: "present"
 '''
 
-from ansible.module_utils.pycompat24 import get_exception
 
 class YumRepo(object):
     # Class global variables
